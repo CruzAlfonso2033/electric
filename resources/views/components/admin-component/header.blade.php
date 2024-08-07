@@ -18,12 +18,13 @@
         
         <div class="col-7">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/" class="nav-link px-2 text-white">Inicio</a></li>
-                <li><a href="/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
-                <li><a href="/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
-                <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
-                <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">Gestiones</a></li>
-                <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">Informes</a></li>
+                <li><a href="/admin/Inicio" class="nav-link px-2 text-white">Inicio</a></li>
+                <li><a href="/admin/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
+                <li><a href="/admin/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
+                <li><a href="/admin/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
+                <li><a href="/admin/Inventario" class="nav-link px-2 text-white">Inventario</a></li>
+                <li><a href="/admin/Informes" class="nav-link px-2 text-white">Informes</a></li>
+                <li><a href="/admin/Extras" class="nav-link px-2 text-white">Extras</a></li>
             </ul>      
         </div>
 

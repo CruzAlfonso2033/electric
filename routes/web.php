@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TipoServicioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -65,20 +66,31 @@ Route::get('index', function () {
 
 Route::get('/admin/Inicio', function () {
     return view('admin.Inicio');
-})->middleware(['auth', 'verified','role:admin'])->name('admin.inicio');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Inicio');
 
 Route::get('/admin/Servicios', function () {
     return view('admin.Servicios');
-})->middleware(['auth', 'verified','role:admin'])->name('admin.servicios');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios');
 
 Route::get('/admin/Tienda', function () {
     return view('admin.Tienda');
-})->middleware(['auth', 'verified','role:admin'])->name('admin.tienda');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Tienda');
 
 Route::get('/admin/AcercaDeNosotros', function () {
     return view('admin.AcercaDeNosotros');
-})->middleware(['auth', 'verified','role:admin'])->name('admin.acercadenosotros');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.AcercaDeNosotros');
 
+Route::get('/admin/Inventario', function () {
+    return view('admin.Inventario');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Inventario');
+
+Route::get('/admin/Informes', function () {
+    return view('admin.Informes');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Informes');
+
+Route::get('/admin/Extras', function () {
+    return view('admin.Extras');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Extras');
 
 
 // AUTENTICACIÓN
@@ -87,5 +99,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+// CONTROLADORES
+
+Route::resource('Extras', TipoServicioController::class);
 
 require __DIR__.'/auth.php';
